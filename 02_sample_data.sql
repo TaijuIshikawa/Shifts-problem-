@@ -18,11 +18,12 @@ INSERT INTO employees (employee_name, hourly_wage, role, manager_id, condition, 
 
     -- Shibuya Branch 
     ('Inji Che', 1400, 'Barista', NULL, 'Cross-Store Support', 2),
-    ('Momoka Fujioka', 1400, 'Barista', NULL, 'Weekend Support', 2);
+    ('Momoka Fujioka', 1400, 'Barista', NULL, 'Weekend Support', 2)
+    ('Hyelim Kang',1450,'Barista,NULL,regular staff,2);
 
 -- 3. DAILY SHIFTS 
 INSERT INTO daily_shifts (shift_day, store_id, weekly_hour, employee_id) VALUES
-    ('Everday', 3, 40, 1), -- Taiju Ishikawa
+    ('Everyday', 3, 40, 1), -- Taiju Ishikawa
     ('Weekend', 3, 25, 2), -- Ryosuke Hatanaka
     ('Weekday', 3, 25, 3), -- Chandler McCoy
     ('Weekend', 3, 16, 4), -- Yuta Araki 
