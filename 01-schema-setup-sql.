@@ -1,13 +1,13 @@
 -- 1. STORES TABLE
 CREATE TABLE stores (
-    store_id INT PRIMARY KEY,
+    store_id INT PRIMARY KEY AUTO_INCREMENT,
     store_name VARCHAR(50) NOT NULL,
     location VARCHAR(25) DEFAULT 'Takeshita-Street'
 );
 
 -- 2. EMPLOYEES TABLE
 CREATE TABLE employees (
-    employee_id INT PRIMARY KEY,
+    employee_id INT PRIMARY KEY AUTO_INCREMENT,
     employee_name VARCHAR(25) NOT NULL,
     hourly_wage INT,
     role VARCHAR(20) NOT NULL,
@@ -19,7 +19,7 @@ CREATE TABLE employees (
 
 -- 3. DAILY SHIFTS TABLE
 CREATE TABLE daily_shifts (
-    shift_id INT PRIMARY KEY,
+    shift_id INT PRIMARY KEY AUTO_INCREMENT,
     shift_day VARCHAR(10),
     store_id INT,
     weekly_hour INT,
