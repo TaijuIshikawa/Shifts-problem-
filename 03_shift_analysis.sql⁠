@@ -1,4 +1,5 @@
-SELECT --to find available staff in other shops
+Find available staff in other stores
+SELECT 
     e.employee_name, 
     e.role, 
     ds.shift_day, 
@@ -6,4 +7,4 @@ SELECT --to find available staff in other shops
 FROM stores s
 JOIN employees e ON s.store_id = e.store_id
 JOIN daily_shifts ds ON e.employee_id = ds.employee_id
-WHERE ds.shift_day = 'Weekend'AND NOT s.stire_id=3;
+WHERE ds.shift_day = 'Weekend'AND NOT s.store_id=3;
