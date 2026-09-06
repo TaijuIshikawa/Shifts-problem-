@@ -1,0 +1,29 @@
+-- 1. STORES TABLE
+CREATE TABLE stores (
+    store_id INT PRIMARY KEY,
+    store_name VARCHAR(50) NOT NULL,
+    location VARCHAR(25) DEFAULT 'Takeshita-Street'
+);
+
+-- 2. EMPLOYEES TABLE
+CREATE TABLE employees (
+    employee_id INT PRIMARY KEY,
+    employee_name VARCHAR(25) NOT NULL,
+    hourly_wage INT,
+    role VARCHAR(20) NOT NULL,
+    manager_id INT,
+    condition VARCHAR(50),
+    store_id INT,
+    FOREIGN KEY (store_id) REFERENCES stores(store_id)
+);
+
+-- 3. DAILY SHIFTS TABLE
+CREATE TABLE daily_shifts (
+    shift_id INT PRIMARY KEY,
+    shift_day VARCHAR(10),
+    store_id INT,
+    weekly_hour INT,
+    employee_id INT,
+    FOREIGN KEY (employee_id) REFERENCES employees(employee_id),
+    FOREIGN KEY (store_id) REFERENCES stores(store_id)
+);
