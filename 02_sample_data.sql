@@ -1,5 +1,5 @@
 -- 1. STORES
-INSERT INTO stores VALUES (store_name, location)
+INSERT INTO stores(store_name, location) VALUES
 ('Doutor Harajuku', 'Harajuku'),
 ('Doutor Shibuya', 'Shibuya-Centre')
 ('Doutor Takeshita','Takeshita-Street');
